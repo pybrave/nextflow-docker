@@ -16,7 +16,7 @@
 version ?= 25.06.0
 
 build: dist/docker/amd64
-	cp ../nextflow .
+	# cp ../nextflow .
 	docker buildx build --platform linux/amd64 --output=type=docker --progress=plain --tag nextflow/nextflow:${version} --build-arg TARGETPLATFORM=linux/amd64 .
 
 build-arm: dist/docker/arm64

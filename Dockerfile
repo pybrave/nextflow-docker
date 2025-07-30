@@ -19,6 +19,7 @@ RUN mkdir /.nextflow \
  && chmod 755 /usr/local/bin/nextflow \
  && chmod 755 /usr/local/bin/entry.sh \
  && nextflow info
+RUN chmod  -R  777 /.nextflow
 
 RUN mkdir -p /.nextflow/plugins
 COPY nf-hello-0.7.0 /.nextflow/plugins/nf-hello-0.7.0
